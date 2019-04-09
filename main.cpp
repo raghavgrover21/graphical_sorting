@@ -19,9 +19,20 @@ void bubbleSot(int(&arrayVal) [MAX])
         {
             if( arrayVal[j] > arrayVal[j+1] )    
             {
-                swapValue(arrayVal[j],arrayVal[j+1]);
+                swap(arrayVal[j],arrayVal[j+1]);
             }
 
         }
     }
+}
+int randomNumber(int num)
+{
+    const float scale = rand()/float(RAND_MAX);
+    return int(scale * num);
+}
+void swap(int &x, int &y)
+{
+    x = x + y;
+    y = x - y;
+    x = x - y;
 }
